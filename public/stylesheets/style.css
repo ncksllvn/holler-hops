@@ -1,0 +1,21 @@
+.card, .preview-card {
+
+}
+
+.preview-card .preview-title{
+	
+}
+
+.hours {
+	margin-top: 0;
+}
+
+footer .row {
+	margin-bottom: 0;
+	padding: 15px 0;
+	color: #fff;
+}
+
+footer address {
+	font-style: normal;
+}

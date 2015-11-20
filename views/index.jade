@@ -1,38 +1,66 @@
 extends layout
 
 block content
-  .container
-      br
-      br
-      h1.header.center.orange-text Starter Template
-      .row.center
-        h5.header.col.s12.light A modern responsive front-end framework based on Material Design
-      .row.center
-        a#download-button.btn-large.waves-effect.waves-light.orange(href='http://materializecss.com/getting-started.html') Get Started
-      br
-      br
-  .container
-    .section
-      // Icon Section
+  .section.no-pad-top
+    .slider
+      ul.slides
+        li
+          img(src='http://lorempixel.com/1170/350/nightlife/2')
+          .caption.center-align
+            h3 The finest of Northern Kentucky.
+            h5.light.grey-text.text-lighten-3 Fine food. Finer beer. Even finer company.
+        li
+          img(src='http://lorempixel.com/1170/350/nightlife/1')
+          .caption.left-align
+            h3 The sustenance your heart desires.
+            h5.light.grey-text.text-lighten-3 Burgers. Wings. Tacos. Hummus.
+        li
+          img(src='http://lorempixel.com/1170/350/nightlife/3')
+          .caption.right-align
+            h3 Twelve rotating taps.
+            h5.light.grey-text.text-lighten-3 We cater to the beer snobs.
+        li
+          img(src='http://lorempixel.com/1170/350/nightlife/4')
+          .caption.center-align
+            h3 Kentucky pride.
+            h5.light.grey-text.text-lighten-3 That means bourbon. And Kentucky Fried Eggs.
+
+  .section
+    .container
       .row
         .col.s12.m4
-          .icon-block
-            h2.center.light-blue-text
-              i.material-icons flash_on
-            h5.center Speeds up development
-            p.light
-              | We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.
+          .card.preview-card
+            .card-image
+              img(src='/images/burger.jpg')
+            .card-content
+              .card-title.preview-title The Menu
         .col.s12.m4
-          .icon-block
-            h2.center.light-blue-text
-              i.material-icons group
-            h5.center User Experience Focused
-            p.light
-              | By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.
+          .card.preview-card
+            .card-image
+              img(src='/images/tap2.jpg')
+            .card-content
+              .card-title.preview-title The Tap
         .col.s12.m4
-          .icon-block
-            h2.center.light-blue-text
-              i.material-icons settings
-            h5.center Easy to work with
-            p.light
-              | We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.
+          .card.preview-card
+            .card-image
+              img(src='/images/events.jpg')
+            .card-content
+              .card-title.preview-title Facebook
+            
+  .section
+    .container
+      .row
+        .col.m8.s12.maps
+          iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3101.065066264534!2d-84.69697578530486!3d38.991011349026934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8841c42c9f4ce4bb%3A0xd9a9f33aa62289e5!2s7500+Oakbrook+Dr+%231%2C+Florence%2C+KY+41042!5e0!3m2!1sen!2sus!4v1447961574913', width='100%', height='257', scroll='false', frameborder='0', style='border:0; pointer-events:none', allowfullscreen='')
+        .col.m4.s12
+          .card.hours
+            .card-content
+              span.card-title Our Hours
+              ul.hours
+                li M: 3p - 12a
+                li Tu: 3p - 12a
+                li W: 12p -2a
+                li Th: 12p - 2a
+                li F: 12p - 2a
+                li Sa: 12p - 2a
+                li Su: 12p - 12a
