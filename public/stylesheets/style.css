@@ -1,5 +1,5 @@
 .card, .preview-card {
-
+	box-shadow: none;
 }
 
 .preview-card .preview-title{
