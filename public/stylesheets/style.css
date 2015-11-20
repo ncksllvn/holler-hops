@@ -1,19 +1,12 @@
 html {
-	
+	font-family: Calibri,Trebuchet,sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .card-title, nav  .nav-wrapper.container ul li , .special-font, footer  {
 	text-transform: uppercase;
+	font-family: 'Fjalla One', sans-serif;
 }
 
-nav {
-	
-}
-
-	nav  .nav-wrapper.container ul li {
-		text-transform: uppercase;
-	}
-	
 .card, .z-depth-1 {
 	box-shadow: none;
 }
@@ -48,10 +41,6 @@ nav {
 			-o-transform:scale(1.15); /* Opera */
 			transform:scale(1.15);
 		}
-		
-		.preview-card-wrapper .preview-card .card-title {
-			text-transform: uppercase;
-		}
 
 .hours {
 	margin-top: 0;
@@ -73,8 +62,4 @@ footer {
 	
 	footer address {
 		font-style: normal;
-	}
-	
-	footer .quote {
-		text-transform: uppercase;
 	}
