@@ -22,6 +22,11 @@
 	margin-top: 0;
 }
 
+.hours ul li {
+	font-size: 24px;
+	font-weight: 300;
+}
+
 footer .row {
 	margin-bottom: 0;
 	padding: 15px 0;
