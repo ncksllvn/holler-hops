@@ -27,15 +27,26 @@ nav {
 	} 
 	
 		.preview-card-wrapper .preview-card .preview-card-image {
-			background-color: #000;
+			/*background-color: #000;*/
 		}
 
 		.preview-card-wrapper .preview-card .card-image{
-			opacity: 0.8;
+			overflow: hidden;
+		}
+		
+		.preview-card-wrapper .preview-card .card-image img{
+			transition: all 200ms linear;
+			-webkit-transition: all 200ms linear;
+			-o-transition: all 200ms linear;
+			-moz-transition: all 200ms linear;
 		}
 
-		.preview-card-wrapper:hover .preview-card .card-image {
-			opacity: 1;
+		.preview-card-wrapper:hover .preview-card .card-image img{
+			-webkit-transform:scale(1.15); /* Safari and Chrome */
+			-moz-transform:scale(1.15); /* Firefox */
+			-ms-transform:scale(1.15); /* IE 9 */
+			-o-transform:scale(1.15); /* Opera */
+			transform:scale(1.15);
 		}
 		
 		.preview-card-wrapper .preview-card .card-title {
