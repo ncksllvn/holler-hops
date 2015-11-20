@@ -1,18 +1,22 @@
-.card, .preview-card {
-	box-shadow: none;
+.preview-card-wrapper {
+	color: inherit;
 }
 
-.preview-card .preview-card-image {
-	background-color: #000;
-}
+	.preview-card-wrapper .preview-card {
+		
+	} 
+	
+		.preview-card-wrapper .preview-card .preview-card-image {
+			background-color: #000;
+		}
 
-.preview-card .card-image{
-	opacity: 0.8;
-}
+		.preview-card-wrapper .preview-card .card-image{
+			opacity: 0.8;
+		}
 
-.preview-card:hover .card-image {
-	opacity: 1;
-}
+		.preview-card-wrapper:hover .preview-card .card-image {
+			opacity: 1;
+		}
 
 .hours {
 	margin-top: 0;
