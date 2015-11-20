@@ -1,6 +1,5 @@
 .card, .preview-card {
 	box-shadow: none;
-	border: 1px solid #ccc;
 }
 
 .preview-card .preview-card-image {
