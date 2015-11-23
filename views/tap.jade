@@ -5,19 +5,20 @@ block content
     .container
       h3 What's On Tap
   .container
-    p We do our best to keep this list as up-to-date as possible, but it's possible we'll have blown a keg or two
+    p We do our best to keep this list up-to-date but it's possible we'll have blown a keg or two
       | before getting the chance, so call ahead if a certain beer is of the upmost importance to you. We also have lots 
       | of bottled beer, wine, bourbon and more in case you have a hankering for something not on tap. 
-    table
-      thead
-        th Brewery
-        th Name
-        th APV
-        th IBU
-      tbody
-        each beer, index in beers
-          tr(class= index % 2 === 0 ? 'light-green lighten-5' : '' )
-            td= beer.brewery
-            td= beer.name
-            td= beer.abv + '%'
-            td= beer.ibu
+    .section
+      table
+        thead
+          th Brewery
+          th Name
+          th APV
+          th IBU
+        tbody
+          each beer, index in beers
+            tr(class= index % 2 === 0 ? 'light-green lighten-5' : '' )
+              td= beer.brewery
+              td= beer.name
+              td= beer.abv + '%'
+              td= beer.ibu
