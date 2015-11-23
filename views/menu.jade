@@ -1,5 +1,163 @@
 extends layout
 
 block content
-  .container
-    h1 The Menu
+  .page-header.light-green.lighten-4
+    .container
+      h3 The Menu
+    
+  .container#menu
+    .row
+      .col.s12.m9.l9
+        #appetizers.section.scrollspy
+          h4.light-green.lighten-5.menu-section-title Appetizers
+          
+          .menu-item
+            h5.menu-item-title Pretzel &amp; Beer Cheese
+              small.menu-item-price.grey-text $7.95
+            .menu-item-description
+              | Warm pretzels served with housemade smoky beer cheese.
+              
+          .menu-item
+            h5.menu-item-title Potato Skins
+              small.menu-item-price.grey-text $7.95
+            .menu-item-description
+              | Classic potato skins stuffed with pimento cheese, bacon and chives.
+              
+          .menu-item
+            h5.menu-item-title Spinach Artichoke Baguettes
+              small.menu-item-price.grey-text $9.00
+            .menu-item-description
+              | Creamy spinach artichoke compote served on toasted baguettes.
+              
+          .menu-item
+            h5.menu-item-title Homemade Fries
+              small.menu-item-price.grey-text $3.50
+            .menu-item-description
+              | Our fresh hand-cut fries topped any way you want it
+          
+          .menu-item
+            h5.menu-item-title Hummus
+              small.menu-item-price.grey-text $7.95
+            .menu-item-description
+              | Garbanzo bean puree, garlic, tahini, roasted red peppers and lemon, served with baguette slices.
+              
+          .menu-item
+            h5.menu-item-title Quesadilla
+              small.menu-item-price.grey-text $9.00
+            .menu-item-description
+              | Classic cheese quesadilla on a flour tortilla served with homemade salsa and sour cream. 
+              | <b>Add chicken or shrimp for an additional $2.00.</b>
+              
+          .menu-item
+            h5.menu-item-title Beer-Brined Wings
+              small.menu-item-price.grey-text $9.50
+            .menu-item-description
+              | Buffalo, Asian, or garlic glaze, served with celery, bleu cheese, or ranch.
+            
+        #soups-and-salads.section.scrollspy
+          h4.light-green.lighten-5.menu-section-title Soups and Salads
+          
+          .menu-item
+            h5.menu-item-title Holler Chili
+              small.menu-item-price.grey-text $5.00
+              
+          .menu-item
+            h5.menu-item-title Soup of the Moment
+              small.menu-item-price.grey-text $4.50
+              
+          .menu-item
+            h5.menu-item-title Beef Barley
+              small.menu-item-price.grey-text $5.00
+              
+          .menu-item
+            h5.menu-item-title Wedge Salad
+              small.menu-item-price.grey-text $5.00
+              
+          .menu-item
+            h5.menu-item-title Chef's Salad
+              small.menu-item-price.grey-text $7.50
+              
+          .menu-item
+            h5.menu-item-title Holler House Greens
+              small.menu-item-price.grey-text $4.50
+        
+        #specials.section.scrollspy
+          h4.light-green.lighten-5.menu-section-title House Specials
+          
+          .menu-item
+            h5.menu-item-title Holler House Burger
+              small.menu-item-price.grey-text $10.50
+            .menu-item-description
+              | Our classic hand-pattied burger topped with homemade pimento chese, lettuce, tomatoes and grilled onions.
+              
+          .menu-item
+            h5.menu-item-title Kentucky Egg
+              small.menu-item-price.grey-text $9.50
+            .menu-item-description
+              | A twist on the Scotch egg, we encase a boiled egg with goetta, roll it in panko and deep fry it until golden brown and delicious. Served with homemade spicy honey mustard sauce.
+              
+          .menu-item
+            h5.menu-item-title Cheesesteak Sandwich
+              small.menu-item-price.grey-text $9.95
+            .menu-item-description
+              | Hand-cut prime rib, onions and peppers topped with mushrooms and pepper jack cheese.
+          
+        #sandwiches.section.scrollspy
+          h4.light-green.lighten-5.menu-section-title Sandwiches and Wraps
+          
+          .menu-item
+            h5.menu-item-title Classic Burger
+              small.menu-item-price.grey-text $9.00
+            .menu-item-description
+              | Tomato, onion, mixed greens, pickle. 
+              | <b>Make your burger Black-n-Bleu for $2. Add bacon or cheese for $1.</b> 
+              
+          .menu-item
+            h5.menu-item-title Holler Heaven
+              small.menu-item-price.grey-text $10.50
+            .menu-item-description
+              | Fried chicken breast, pan-seared Kentucky ham, and fries topped with our creamy country gravy and a side of slaw
+          
+          .menu-item
+            h5.menu-item-title Black Bean Burger
+              small.menu-item-price.grey-text $8.95
+            .menu-item-description
+              | Homemade veggie burger, lettuce, tomato, onion, served with pesto mayo. 
+              | <b>Make your burger Black-n-Bleu for $2. Add bacon or cheese for $1.</b>
+              
+          .menu-item
+            h5.menu-item-title Pulled Pork Sandwich
+              small.menu-item-price.grey-text $9.50
+            .menu-item-description
+              | Slow cooked pulled pork with tangy Holler BBQ sauce, served on a Kaiser roll with slaw
+                 
+          .menu-item
+            h5.menu-item-title Blackened Fish Sandwich
+              small.menu-item-price.grey-text $8.50
+            .menu-item-description
+              | Have it grilled, blackened, or fried, on a rosemary ciabatta bun, with our homemade sirracha tartar and a side of slaw
+              
+          .menu-item
+            h5.menu-item-title Shrimp Tacos
+              small.menu-item-price.grey-text $11.95
+            .menu-item-description
+              | With black eyed pea roasted corn salsa, lime, slaw, and sirracha sauce
+              
+          .menu-item
+            h5.menu-item-title Buffalo Chicken Wrap
+              small.menu-item-price.grey-text $8.95
+            .menu-item-description
+              | Fried chicken fingers dipped in buffalo sauce, with lettuce, celery, tomato and house made bleu cheese dressing.
+              
+          .menu-item
+            h5.menu-item-title Old Fashioned Club
+              small.menu-item-price.grey-text $7.95
+            .menu-item-description
+              | A classic club with cheddar cheese, bacon, and hand sliced turkey and ham, served with a generous portion of fries
+        
+      .col.hide-on-small-only.m3.l3
+        ul.section.table-of-contents.special-font
+          li: a(href='#appetizers') Appetizers
+          li: a(href='#soups-and-salads') Soups and Salads
+          li: a(href='#specials') House Specials
+          li: a(href='#sandwiches') Sandwiches and Wraps

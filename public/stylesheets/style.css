@@ -73,3 +73,20 @@ address {
 .input-field label {
   left: 0;
 }
+
+.menu-section-title {
+  padding: 25px 20px 20px;
+  margin-bottom: 10px;
+}
+
+.menu-item {
+  padding: 5px 20px;
+}
+
+  .menu-item .menu-item-title {
+    vertical-align: bottom;
+  }
+  
+  .menu-item .menu-item-price {
+    margin-left: 10px;
+  }
