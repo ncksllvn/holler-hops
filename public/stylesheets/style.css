@@ -8,7 +8,9 @@ h1, h2, h3, h4, h5, h6, .card-title, nav  .nav-wrapper.container ul li , .specia
 }
 
 .page-header {
-  margin-top: 40px;
+  margin: 0 0 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .card, .z-depth-1 {
@@ -64,7 +66,10 @@ footer {
 		color: #fff;
 	}
 	
-	footer address {
-		font-style: normal;
-	}
+address {
+  font-style: normal;
+}
   
+.input-field label {
+  left: 0;
+}
