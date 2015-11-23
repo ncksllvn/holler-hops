@@ -11,7 +11,12 @@
       $('.maps iframe').css("pointer-events", "auto");
     });
     
-    $('#menu ul').pushpin({ top: $('#menu').offset().top, offset: 64 });
+    
+    //Fixed positioning for the scrollspy on the menu page
+    var $menu = $('#menu') 
+    
+    if ($menu.length)
+      $('#menu ul').pushpin({ top: $menu.offset().top, offset: 64 });
     
     $('.scrollspy').scrollSpy();
 
