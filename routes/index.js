@@ -1,13 +1,9 @@
+var GoogleSpreadsheet = require("google-spreadsheet");
 var express = require('express')
 var router = express.Router()
 
-/* GET home page. */
 router.get('/', (req, res, next) => 
   res.render('index', { title: 'Home' })
-)
-
-router.get('/tap', (req, res, next) => 
-  res.render('tap', { title: 'On Tap' })
 )
 
 router.get('/menu', (req, res, next) => 
@@ -21,5 +17,28 @@ router.get('/story', (req, res, next) =>
 router.get('/contact', (req, res, next) =>
   res.render('contact', { title: 'Contact Us' })
 )
+
+// Get Beer List from Google Spreadsheet
+var { beerListSpreadsheetId } = require('../locals')
+var beerList = new GoogleSpreadsheet(beerListSpreadsheetId);
+
+router.get('/tap', (req, res, next) => {
+  
+  beerList.getRows(1, (err, beers) => {
+    
+    if (err){
+      let beerError = new Error('Sorry, were having trouble accessing our beer \
+      list at the moment. Please try again later.')
+      
+      beerError.status = 500
+      
+      return next(beerError)
+    }
+    
+    res.render('tap', { title: 'On Tap', beers: beers })
+    
+  })
+  
+})
 
 module.exports = router

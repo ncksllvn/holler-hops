@@ -2,4 +2,18 @@ extends layout
 
 block content
   .container
-    h1 What's On Tap
+    h2 What's On Tap
+    
+    table
+      thead
+        th Brewery
+        th Name
+        th APV
+        th IBU
+      tbody
+        each beer, index in beers
+          tr(class= index % 2 === 0 ? 'light-green lighten-5' : '' )
+            td= beer.brewery
+            td= beer.name
+            td= beer.abv + '%'
+            td= beer.ibu
