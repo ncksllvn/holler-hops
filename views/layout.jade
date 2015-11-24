@@ -19,16 +19,51 @@ html(lang='en').light-green.lighten-2
             li: a(href='/tap') Beer We Pour
           ul.right.hide-on-med-and-down
             li: a(href='/story') Our Story
-            li: a(href='/contact') Contact Us
+            li: a(href='/contact') Contact
+            li.hours-dropdown-link
+              a.dropdown-button(href='javascript:;', data-activates='hours-dropdown') We're 
+                if isOpen
+                  span.amber-text.lighten-3-text Open
+                else 
+                  span.pink-text.text-lighten-4 Closed
+                i.material-icons.right arrow_drop_down
+                
           ul#nav-mobile.side-nav.light-green.darken-3
             li: a(href='/').white-text Home
             li: a(href='/menu').white-text Food We Serve
             li: a(href='/tap').white-text Beer We Pour
             li: a(href='/story').white-text Our Story
             li: a(href='/contact').white-text Contact Us
+            li.no-padding
+              ul.collapsible.collapsible-accordion
+                li
+                  a.white-text.collapsible-header We're 
+                    if isOpen
+                      span.amber-text.lighten-3-text Open
+                    else 
+                      span.pink-text.text-lighten-4 Closed
+                    i.mdi-navigation-arrow-drop-down.right
+                  .collapsible-body
+                    ul.light-green.darken-2
+                      li: a.white-text Mon: 3p - 12a
+                      li: a.white-text Tue: 3p - 12a
+                      li: a.white-text Wed: 12p -2a
+                      li: a.white-text Thu: 12p - 2a
+                      li: a.white-text Fri: 12p - 2a
+                      li: a.white-text Sat: 12p - 2a
+                      li: a.white-text Sun: 12p - 12a
             li: a(href='https://www.facebook.com/HollerHopsandGrill').white-text Facebook
           a.button-collapse(href='#', data-activates='nav-mobile')
             i.material-icons menu
+    
+    ul#hours-dropdown.dropdown-content
+      li: span.black-text Mon: 3p - 12a
+      li: span.black-text Tue: 3p - 12a
+      li: span.black-text Wed: 12p -2a
+      li: span.black-text Thu: 12p - 2a
+      li: span.black-text Fri: 12p - 2a
+      li: span.black-text Sat: 12p - 2a
+      li: span.black-text Sun: 12p - 12a
     
     .section.no-pad-top.white
       main

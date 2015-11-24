@@ -94,3 +94,15 @@ address {
 .parallax-container {
   z-index: 1;
 }
+
+.hours-dropdown-link > .dropdown-button > i.material-icons {
+	margin-left: 2px;
+}
+
+ul#hours-dropdown > li {
+	cursor: default;
+}
+
+.side-nav li:hover, .side-nav li.active {
+	background-color: rgba(0,0,0,0.2);
+}

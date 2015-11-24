@@ -4,6 +4,9 @@
     // Side navigation for mobile ------------
     $('.button-collapse').sideNav();
     
+    // Dropdown buttons
+    $(".dropdown-button").dropdown();
+    
     // Index page -------------------------
     $('.slider').slider({full_width: true});
     
