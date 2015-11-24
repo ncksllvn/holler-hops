@@ -1,4 +1,20 @@
-var postmark = require('postmark')(process.env.POSTMARK_API_TOKEN)
+var { environment } = require('../locals')
+var postmark
+
+if (environment == 'development')
+{
+  postmark = {
+    send: (data, callback) => {
+      setTimeout(callback, 300, {
+        message: 'Development Mode - No email actually sent'
+      })
+    }
+  }
+}
+else 
+{
+  postmark = require('postmark')(process.env.POSTMARK_API_TOKEN)
+}
 
 module.exports = (data, callback) => {
   

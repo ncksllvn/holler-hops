@@ -21,11 +21,13 @@ router.get('/contact', (req, res, next) =>
 
 router.post('/contact', (req, res, next) => {
   email(req.body, (err, success) => {
-    if(err) {
+    if(err) 
+    {
       console.log(err);
       new Error(err);
       res.status(500).end()
-    } else {
+    } else 
+    {
       console.log('WOOHOO, Transmission accepted by Postmark!');
       console.log(success);
       res.status(200).end()
@@ -43,7 +45,8 @@ router.get('/tap', (req, res, next) => {
   
   beerList.getRows(1, (err, beers) => {
     
-    if (err){
+    if (err)
+    {
       let beerError = new Error('Sorry, were having trouble accessing our beer \
       list at the moment. Please try again later.')
       
