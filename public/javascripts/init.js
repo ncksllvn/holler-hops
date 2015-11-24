@@ -1,15 +1,18 @@
 (function($){
   $(function(){
 
+    // Side navigation for mobile ------------
     $('.button-collapse').sideNav();
     
+    // Index page -------------------------
     $('.slider').slider({full_width: true});
     
+    // Fix for Google Map picking up scrolling
     $('.maps').click(function () {
       $('.maps iframe').css("pointer-events", "auto");
     });
     
-    //Fixed positioning for the scrollspy on the menu page
+    // Menu page ------------------------
     var $menu = $('#menu') 
     
     if ($menu.length)
@@ -17,7 +20,25 @@
     
     $('.scrollspy').scrollSpy();
     
+    // Our Story --------------------------
     $('.parallax').parallax();
+    
+    // Contact Page ------------------------
+    $('form[name=contact]').submit(function(event){
+      event.preventDefault()
+      
+      var $this = $(this)
+      var $submit = $this.find('button[type=submit]').attr('disabled', 'true')
+      var $message = $('.email-response')
+      
+      $.post('/contact', {
+        data: $this.serialize()
+      }).always(function(response){
+        $this.fadeOut()
+        $message.html('Your message has been received! We will respond to you soon.')
+      })
+      
+    })
 
   }); // end of document ready
 })(jQuery); // end of jQuery name space

@@ -1,4 +1,5 @@
-var GoogleSpreadsheet = require("google-spreadsheet");
+var GoogleSpreadsheet = require("google-spreadsheet")
+var email = require('../util/email')
 var express = require('express')
 var router = express.Router()
 
@@ -14,9 +15,25 @@ router.get('/story', (req, res, next) =>
   res.render('story', { title: 'Our Story' })
 )
 
-router.get('/contact', (req, res, next) =>
+router.get('/contact', (req, res, next) => 
   res.render('contact', { title: 'Contact Us' })
 )
+
+router.post('/contact', (req, res, next) => {
+  email(req.body, (err, success) => {
+    if(err) {
+      console.log(err);
+      new Error(err);
+      res.status(500).end()
+    } else {
+      console.log('WOOHOO, Transmission accepted by Postmark!');
+      console.log(success);
+      res.status(200).end()
+    }
+    
+  })
+  
+})
 
 // Get Beer List from Google Spreadsheet
 var { beerListSpreadsheetId } = require('../locals')

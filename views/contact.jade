@@ -23,7 +23,8 @@ block content
           
       .col.m8.s12
         h4 Message Us
-        form(name='contact')
+        .email-response
+        form(name='contact', action='/contact', method='post')
           .input-field
             input.validate(type='text', name='name', required='')
             label(for='name') Name*
