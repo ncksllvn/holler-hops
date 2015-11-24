@@ -5,7 +5,7 @@ if (environment == 'development')
 {
   postmark = {
     send: (data, callback) => {
-      setTimeout(callback, 300, {
+      setTimeout(callback, 300, null, {
         message: 'Development Mode - No email actually sent'
       })
     }
