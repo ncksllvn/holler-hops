@@ -1,4 +1,3 @@
-var { environment } = require('../locals')
 var nodemailer = require('nodemailer')
 var sendToEmail = process.env.SEND_TO_EMAIL
 var email = process.env.EMAIL_ADDRESS
