@@ -34,9 +34,8 @@
       var $submit = $this.find('button[type=submit]').attr('disabled', 'true')
       var $message = $('.email-response')
       
-      $.post('/contact', {
-        data: $this.serialize()
-      }).always(function(response){
+      $.post('/contact', $this.serialize())
+        .always(function(response){
         $this.fadeOut()
         $message.html('Your message has been received! We will respond to you soon.')
       })

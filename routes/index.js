@@ -21,20 +21,11 @@ router.get('/contact', (req, res, next) =>
 
 router.post('/contact', (req, res, next) => {
   email(req.body, (err, success) => {
-    if(err) 
-    {
-      console.log(err);
-      new Error(err);
-      res.status(500).end()
-    } else 
-    {
-      console.log('WOOHOO, Transmission accepted by Postmark!');
-      console.log(success);
-      res.status(200).end()
-    }
+    if (err)
+      return next(err)
     
+    res.status(200).end()
   })
-  
 })
 
 // Get Beer List from Google Spreadsheet
