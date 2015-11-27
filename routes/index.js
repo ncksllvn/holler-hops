@@ -4,19 +4,30 @@ var express = require('express')
 var router = express.Router()
 
 router.get('/', (req, res, next) => 
-  res.render('index', { title: 'Home' })
+  res.render('index', { 
+    title: 'Home'
+  })
 )
 
 router.get('/menu', (req, res, next) => 
-  res.render('menu', { title: 'Menu' })
+  res.render('menu', { 
+    title: 'Menu',
+    description: 'See what\'s cookin\' at your favorite neighborhood bar and grill.'  
+  })
 )
 
 router.get('/story', (req, res, next) => 
-  res.render('story', { title: 'Our Story' })
+  res.render('story', { 
+    title: 'Our Story',
+    description: 'The story of Holler Hops and the people behind it.' 
+  })
 )
 
 router.get('/contact', (req, res, next) => 
-  res.render('contact', { title: 'Contact Us' })
+  res.render('contact', { 
+    title: 'Contact Us',
+    description: 'View our hours, address, and phone number, or send us a message.' 
+  })
 )
 
 router.post('/contact', (req, res, next) => {
@@ -46,7 +57,11 @@ router.get('/tap', (req, res, next) => {
       return next(beerError)
     }
     
-    res.render('tap', { title: 'On Tap', beers: beers })
+    res.render('tap', { 
+      title: 'On Tap', 
+      beers: beers, 
+      description: 'See what beers we got flowin\' at your favorite neighborhood bar and grill.' 
+    })
     
   })
   
