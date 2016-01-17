@@ -12,8 +12,12 @@ h1, h2, h3, h4, h5, h6, .card-title, nav  .nav-wrapper.container ul li , .specia
   padding: 10px 0;
 }
 
-#logo {
+.logo {
   height: 75px;
+}
+
+.logo-small {
+  height: 56px;
 }
 
 .card, .z-depth-1 {
