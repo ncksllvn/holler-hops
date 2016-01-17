@@ -2,6 +2,10 @@ var GoogleSpreadsheet = require("google-spreadsheet")
 var email = require('../util/email')
 var express = require('express')
 var router = express.Router()
+var _ = require('underscore')
+var { foodMenuSpreadsheetId, beerListSpreadsheetId } = require('../locals')
+var beerList = new GoogleSpreadsheet(beerListSpreadsheetId)
+var foodMenu = new GoogleSpreadsheet(foodMenuSpreadsheetId)
 
 router.get('/', (req, res, next) => 
   res.render('index', { 
@@ -9,12 +13,35 @@ router.get('/', (req, res, next) =>
   })
 )
 
-router.get('/menu', (req, res, next) => 
-  res.render('menu', { 
-    title: 'Menu',
-    description: 'See what\'s cookin\' at your favorite neighborhood bar and grill.'  
+router.get('/menu', (req, res, next) => {
+  
+  foodMenu.getRows(1, (err, food) => {
+    
+    if (err)
+    {
+      let foodError = new Error('Sorry, were having trouble accessing our menu at the moment. Please try again later.')
+      
+      foodError.status = 500
+      
+      return next(foodError)
+    }
+
+    var foodsGrouped = _.groupBy(food, 'category')
+    var counter = 0
+    
+    _.each(foodsGrouped, (category, index)=>{
+      category.scrollspyId = 'menu-category-' + counter++
+    })
+
+    res.render('menu', { 
+      title: 'Menu',
+      food: foodsGrouped,
+      description: 'See what\'s cookin\' at your favorite neighborhood bar and grill.'  
+    })
+
   })
-)
+
+})
 
 router.get('/story', (req, res, next) => 
   res.render('story', { 
@@ -39,18 +66,13 @@ router.post('/contact', (req, res, next) => {
   })
 })
 
-// Get Beer List from Google Spreadsheet
-var { beerListSpreadsheetId } = require('../locals')
-var beerList = new GoogleSpreadsheet(beerListSpreadsheetId);
-
 router.get('/tap', (req, res, next) => {
   
   beerList.getRows(1, (err, beers) => {
     
     if (err)
     {
-      let beerError = new Error('Sorry, were having trouble accessing our beer \
-      list at the moment. Please try again later.')
+      let beerError = new Error('Sorry, were having trouble accessing our beer list at the moment. Please try again later.')
       
       beerError.status = 500
       
