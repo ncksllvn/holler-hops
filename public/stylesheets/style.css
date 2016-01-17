@@ -2,9 +2,16 @@ html {
 	font-family: Calibri,Trebuchet,sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, .card-title, nav  .nav-wrapper.container ul li , .special-font, footer  {
+h1, h2, h3, h4, h5, h6, .card-title, nav  .nav-wrapper ul li , .special-font, footer  {
 	text-transform: uppercase;
 	font-family: 'Fjalla One', sans-serif;
+}
+
+/* Fix for 'our story' falling behind the logo on smaller large displays */
+@media only screen and (min-width: 999px) and (max-width: 1218px){
+  .nav-wrapper.container {
+      width: 85%;
+  }
 }
 
 .page-header {
