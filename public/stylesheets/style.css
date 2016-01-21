@@ -121,3 +121,7 @@ ul#hours-dropdown > li {
 .side-nav li:hover, .side-nav li.active {
 	background-color: rgba(0,0,0,0.2);
 }
+
+.gallery .material-placeholder + .material-placeholder{
+  margin-top: 10px;
+}
