@@ -5,20 +5,20 @@ block content
     .slider
       ul.slides
         li
-          img(src='http://lorempixel.com/1170/350/nightlife/2')
-          .caption.center-align
-            h3 The finest of Northern Kentucky.
-            h5.light.grey-text.text-lighten-3 Fine food. Finer beer. Even finer company.
-        li
-          img(src='http://lorempixel.com/1170/350/nightlife/1')
+          img(src='/images/Holler/crowd-sm.jpg', alt='The Bar')
           .caption.left-align
-            h3 The sustenance your heart desires.
-            h5.light.grey-text.text-lighten-3 Burgers. Wings. Tacos. Hummus.
+            h1 NKY's Undisputed Best.
+            h5 We're pretty awesome.
         li
-          img(src='http://lorempixel.com/1170/350/nightlife/3')
+          img(src='/images/Holler/tap-handles-sm.jpg', alt='Tap Handles')
           .caption.right-align
-            h3 Ten rotating taps.
-            h5.light.grey-text.text-lighten-3 A brew for every palate.
+            h1 Drink. Eat. Chill.
+            h5 The finer parts of life.
+        li
+          img(src='/images/Holler/taps-sm.jpg', alt='The Tap')
+          .caption.center-align
+            h1 Beer. We Have lots.
+            h5 And we're somewhat willing to share.
 
   .section
     .container
@@ -50,7 +50,7 @@ block content
               .card-content
                 .card-title.preview-title Facebook
                 | See what we got happenin'.
-  
+                
   .container
     .divider
   
@@ -72,3 +72,27 @@ block content
                 li F: 12p - 2a
                 li Sa: 12p - 2a
                 li Su: 12p - 12a
+                
+    .container
+      .row
+        .col.m8.s12
+          h4.center-align What's Happenin'
+          .card
+            img.z-depth-1.responsive-img.materialboxed(src='/images/Holler/schedule.jpg', alt='Events Schedule')
+        .col.m4.s12
+          .z-depth-1.fb-page(data-href='https://www.facebook.com/HollerHopsandGrill', data-tabs='timeline', data-height='280px', data-small-header='true', data-adapt-container-width='true', data-hide-cover='true', data-show-facepile='false')
+            .fb-xfbml-parse-ignore
+              blockquote(cite='https://www.facebook.com/HollerHopsandGrill')
+                a(href='https://www.facebook.com/HollerHopsandGrill') Holler Hops and Grill
+
+    #fb-root
+    script.
+      (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=352147471573572";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+
+          

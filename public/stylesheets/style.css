@@ -27,8 +27,8 @@ h1, h2, h3, h4, h5, h6, .card-title, nav  .nav-wrapper ul li , .special-font, fo
   height: 56px;
 }
 
-.card, .z-depth-1 {
-	
+.slides .caption h1, .slides .caption h5 {
+  text-shadow: 0 0 15px #000;
 }
 
 .preview-card-wrapper {
