@@ -26,6 +26,7 @@
     "moment-timezone": "^0.4.1",
     "morgan": "~1.6.1",
     "nodemailer": "^1.10.0",
+    "nodemailer-mailgun-transport": "^1.2.1",
     "postmark": "^1.2.1",
     "serve-favicon": "~2.3.0",
     "underscore": "^1.8.3"
