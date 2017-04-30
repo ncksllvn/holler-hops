@@ -22,16 +22,19 @@ module.exports = (req, res, next) => {
     {
         case 'monday':
         case 'tuesday':
-    case 'wednesday':
-    case 'thursday':
+        case 'wednesday':
+        case 'thursday':
             isOpen = hour >= 15 && hour <= 23 // 3PM - 12AM
             break
+
         case 'sunday':
             isOpen = hour >= 12 && hour <= 23 // 12PM - 12AM
             break
+
         case 'friday':
-      isOpen = hour >= 15 || hour < 2 // 3PM - 2AM
-      break
+            isOpen = hour >= 15 || hour < 2 // 3PM - 2AM
+            break
+
         case 'saturday':
         default:
             isOpen = hour >= 12 || hour < 2 // 12PM - 2AM
